@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Code des sorts
+		</title>
+		<link rel="stylesheet" href="magie.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+	</head>
+	<body>
+		<div class="magiegab">
+			<h1>Obtenir le code d'un sort</h1>
+			<form>
+				<input type="text" value="Nom du Sort" id="spellname" required/>
+				<textarea rows="6" id="spelldesc">Description</textarea>
+				<textarea rows="2" id="spellact">Geste-clef</textarea>
+				<input type="submit" value="Envoyer"/>
+
+			</form>
+
+			<textarea id="resultta" rows="15"></textarea>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>	
+<script>
+	$(document).ready(function(){
+		$("form").submit(function(e){
+			e.preventDefault();
+			
+			var txtresult ="<strong>"+$("#spellname").val()+"</strong><blockquote>"+$("#spelldesc").val()+"\r\n \r\nGeste-clef: "+$("#spellact").val()+"</blockquote>";
+
+			$("#resultta").val(txtresult);
+
+			$("#resultta").addClass("done");
+			setTimeout(function(){$("#resultta").removeClass("done")}, 1000);
+
+		});
+	});
+</script>
+	</body>
+</html>

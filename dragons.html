@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Taille des dragons</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <style>
+  	body{background:black; color: white;}
+  	.contentTaille{
+  		height: 500px;
+  		width: 80%;
+  		overflow: hidden;
+  		border: 1px solid white;
+  		margin: auto;
+  		position: relative;
+  	}
+  	.humanTaille{
+  		position: absolute;
+  		bottom:-5px;
+  	}
+  	.dracoTaille{
+  		position: absolute;
+  		bottom:0px;
+  		left: 60px;
+  	}
+  	.contentButtonTaille{
+  		width: 80%;
+  		margin: auto;
+  		text-align: center;	
+  	}
+  	.taille{
+  		background: #375462;
+  		color: white;
+  		border: none;
+  		padding: 5px;
+  		border-radius: 2px;
+  		margin: 5px;
+  	}
+  	.taille:hover{
+  		box-shadow: 0px 0px 6px white;
+  		font-weight: bold;	
+  	}
+  </style>
+  <script>
+	$(document).ready(function(){
+		//alert("foin");
+		$(".humanTaille").css("height","170px");
+		$(".dracoTaille").css("height","20px");
+		
+		$(".taille").click(function(){
+			$(".dracoTaille").css("height", $(this).attr("id"));	
+			$(".humanTaille").css("height", $(this).attr("human"));	
+		});
+	});
+  
+  </script>
+</head>
+<body>
+<div class="contentButtonTaille">
+<button class="taille" id="20px" human="170px">Naissance</button>
+<button class="taille" id="25px" human="170px">Un mois</button>
+<button class="taille" id="80px" human="170px">Trois mois</button>
+<button class="taille" id="100px" human="170px">Six mois</button>
+<button class="taille" id="150px" human="170px">Neuf mois</button>
+<button class="taille" id="300px" human="170px">Un an</button>
+<button class="taille" id="400px" human="170px">Trois ans</button>
+<button class="taille" id="300px" human="85px">Cinq ans</button>
+<button class="taille" id="400px" human="85px">Huit ans</button>
+<button class="taille" id="100px" human="17px">Dix ans</button>
+<button class="taille" id="200px" human="17px">Vingt ans</button>
+<button class="taille" id="300px" human="17px">Trente ans</button>
+<button class="taille" id="400px" human="17px">Quarante ans</button>
+<button class="taille" id="500px" human="17px">Cinquante ans</button>
+<button class="taille" id="1000px" human="17px">Cent ans</button>
+<button class="taille" id="1050px" human="17px">Deux cents ans</button>
+<button class="taille" id="1060" human="17px">Trois cents ans</button>
+<button class="taille" id="1090" human="17px">Quatre cents ans</button>
+<button class="taille" id="2000px" human="17px">Cinq cents ans</button>
+<button class="taille" id="3000px" human="17px">Mille ans</button>
+<button class="taille" id="4000px" human="17px">Deux mille ans</button>
+<button class="taille" id="5000px" human="17px">Trois mille ans</button>
+</div>
+
+<div class="contentTaille">
+<img src="http://img15.hostingpics.net/pics/7679918cf33922cfebe22a88f135b3c5efc2ea.png" class="humanTaille"/>
+<img src="http://img15.hostingpics.net/pics/858006skydancermglowingbyoloorield6jjufc.png" class="dracoTaille"/>
+</div>
+</body>
+</html>

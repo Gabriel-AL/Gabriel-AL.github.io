@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur de fiches de prédéfini</title>
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Roboto" rel="stylesheet">
+
+
+    <style>
+        html{
+            background-color: #2c373b;
+        }
+        #elo_pub {
+            width: 800px;
+            border: 1px solid #7B8A94;
+            margin: auto;
+            display: flex;
+            box-sizing: border-box;
+            background: #2C353B;
+            color: lightgrey;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+        }
+        
+        header img {
+            border-bottom: 1px solid #7B8A94;
+        }
+        
+        main {
+            width: 70%;
+            border-right: 1px solid #7B8A94;
+        }
+        
+        aside {
+            width: 30%;
+        }
+        
+        aside ul {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        aside li {
+            list-style: none;
+            padding-top: 5px;
+        }
+        
+        aside li a {
+            color: lightgrey;
+            text-decoration: none;
+        }
+        
+        aside li a:hover {
+            color: #2C8073;
+            transition: 0.3s;
+            border-bottom: 1px dotted #fff;
+        }
+        
+        header img {
+            width: 100%;
+        }
+        
+        h1,
+        h2 {
+            margin-bottom: 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+            color: #000;
+            font-family: 'Courgette', cursive;
+        }
+        
+        .span_ad {
+            color: #BBB2FF;
+        }
+        
+        .span_mod {
+            color: #80DAF5;
+        }
+        /***************/
+        
+        .predef_desc {
+            overflow: auto;
+            height: 150px;
+            padding: 10px;
+        }
+        
+        aside img:last-child {
+            padding: 20px;
+        }
+        
+        #predef_descriptions {
+            display: flex;
+        }
+        
+        #predef_descriptions .predef_desc {
+            vertical-align: top;
+            width: 50%;
+        }
+        #elo_pub input, #elo_pub textarea{
+            background-color: #979c9c;
+            border: 1px solid white;
+            box-sizing: border-box;
+            max-width: 100%;
+            padding: 5px 15px;
+        }
+        #elo_pub textarea{
+            display: block;
+        }
+        .plus{
+            background-color: #2c8073;
+            border-radius:50%;
+            color: #979c9c;
+            font-size: 2em;
+            height: 1em;
+            line-height: 1em;
+            margin: auto;
+            text-align: center;
+            transition: box-shadow 0.1s linear, color 0.5s linear;
+            width:1em;
+        }
+        .plus:hover, #elo_pub input[type="submit"]:hover{
+            box-shadow: 0px 0px 5px white;
+            color:white;
+            cursor: pointer;
+        }
+
+        #elo_pub input[type="submit"]{
+            background-color: #2c8073;
+            border: none;
+            border-radius: 3px;
+            color: #979c9c;
+            margin-left: 12.5%;
+            transition: box-shadow 0.1s linear, color 0.5s linear;
+            width: 75%;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <form id="elo_pub">
+
+        <main>
+            <header>
+                <a href="http://elysionrpg.forumactif.org/" target="_blank">
+                    <img src="https://image.noelshack.com/fichiers/2017/24/7/1497809210-bann-pub.jpg" alt="banniere">
+                </a>
+            </header>
+
+            <h1><input type="text" id="nom" placeholder="NOM ET PRENOM"/></h1>
+
+            <section>
+
+                <h2>Physique et mental</h2>
+                <section id="predef_descriptions">
+
+                    <div class="predef_desc">
+
+                        <b>» Physique :</b> 
+                        <textarea rows="7" cols="28" placeholder="Physique de votre personnage"></textarea>
+                    </div>
+
+
+                    <div class="predef_desc">
+
+                        <b>» Mental :</b> 
+                        <textarea rows="7" cols="28" placeholder="Mental de votre personnage"></textarea>
+                    </div>
+
+
+                </section>
+
+                <h2>Histoire</h2>
+                <div class="predef_desc">
+
+                    <textarea rows="10" cols="75" placeholder="Histoire de votre personnage"></textarea>
+
+                </div>
+
+                <h2>Liens</h2>
+                <div class="predef_desc">
+                    <b> <input type="text" id="lien[]" placeholder="Nom du lien"/> :</b><br/><textarea cols="75" placeholder="Description du lien"></textarea><br/>
+                    <div class="plus lienplus">+</div>
+
+                
+                </div>
+
+            </section>
+        </main>
+        <aside>
+
+            <h2> Identité </h2>
+
+            <ul>
+                <li>Race : <input type="text" class="identiteinput" id="idrace"/></li>
+                <li>Age : <input type="text" class="identiteinput" id="idage"/></li>
+                <li>Date de naissance : <input type="text" class="identiteinput" id="idplacebirth"/></li>
+                <li>Lieu de vie : <input type="text" class="identiteinput" id="idplacelife"/></li>
+                <li>Rang social :  <input type="text" class="identiteinput" id="idrang"/></li>
+                <li>Métier :  <input type="text" class="identiteinput" id="idjob"/></li>
+                <li>Salaire : <input type="text" class="identiteinput" id="idwage"/></li>
+                <li>Arme principale : <input type="text" class="identiteinput" id="idweapon"/></li>
+            </ul>
+
+            <h2>Compétences</h2>
+
+            <ul>
+                <li> <input type="text" id="comp[]"/></li>
+            </ul>
+             <div class="plus compplus">+</div>
+
+            <h2>A savoir ...</h2>
+
+            <ul>
+                <li><input type="text" id="savoir[]"/></li>               
+            </ul>
+             <div class="plus savoirplus">+</div>
+
+            <h2>Avatar proposé</h2><br/><input type="text" id="avatar"/><br/><input type="submit" value="Générer le code !"/>
+        </aside>
+
+    </form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".plus").click(function(e){
+            if($(e.target).hasClass("lienplus")){
+                $(e.target).before('<b> <input type="text" id="lien[]" placeholder="Nom du lien"/> :</b><br/><textarea cols="75" placeholder="Description du lien"></textarea><br/>');
+            }else{
+                var theid = $(e.target).prev().find("li input").attr("id");
+                $(e.target).prev().append('<li><input type="text" id="'+theid+'"/></li>');
+            }
+        });
+    });
+
+</script>
+</body>
+
+</html>

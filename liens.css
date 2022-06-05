@@ -1,0 +1,63 @@
+/* FICHE DE LIEN */
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Indie+Flower');
+
+.aldaliencontainer{
+	margin: auto;
+	text-align: center;
+}
+.aldaliencontainer.troisalda{
+	width: 80%;
+}
+.aldaliencontainer br{
+	display: none;
+}
+.aldalien{
+	background-size:cover; 
+	box-shadow: 0px 0px 3px black;
+	display: inline-block;
+	height: 320px;width:200px;
+	margin-right: 1em;
+	margin-bottom: 2em;
+	position: relative;
+	overflow:hidden;
+	vertical-align:top;
+}
+.aldalienblack{
+	background: rgba(0,0,0,0.9);
+	box-sizing: border-box;
+	color: blanchedalmond;
+	font-variant: small-caps;
+	height: 100%;
+	left: 0px;
+	padding: 0.25em;
+	position: absolute;
+	opacity: 0;
+	top: 0px;
+	transition: opacity 0.75s linear;
+	width: 100%;
+}
+.aldalien:hover .aldalienblack{
+	opacity: 1;
+}
+.aldalienname{
+	font-family: 'Cinzel', serif;
+	font-size: 1.2em;
+	line-height: 0.9em;
+	margin-top: 1em;
+}
+.aldalientitre{
+	font-family: 'Cinzel', serif;
+	line-height: 2em;
+}
+.aldaliendesc{
+	font-size: 0.75em;
+	font-variant: normal;
+	height: 200px;
+	margin: 0em 0.5em 2em 0.5em;
+	overflow-y: auto;
+	padding-right: 1em;
+	text-align: justify;
+}
+.aldalienname br, .aldalientitre br,.aldaliendesc br{
+	display: block;
+}
